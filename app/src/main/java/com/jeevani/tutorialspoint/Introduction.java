@@ -52,6 +52,7 @@ public class Introduction extends AppCompatActivity {
 
         intro = (TextView) findViewById(R.id.intro);
         intro.setText(Html.fromHtml(htmlStr));
+        //intro.setGravity(Gravity.CENTER);
         intro1 = (TextView) findViewById(R.id.intro1);
         intro1.setText(Html.fromHtml(htmlStr1));
         intro2 = (TextView) findViewById(R.id.intro2);
