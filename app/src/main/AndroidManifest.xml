@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jeevani.tutorialspoint">
+
+    <supports-screens
+        android:largeScreens="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/FullscreenTheme"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Concepts"
+            android:label="Concepts"
+            android:noHistory="false"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.jeevani.tutorialspoint.Concepts" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SplashScreenActivity" />
+        </activity>
+
+        <activity
+            android:name=".Programs"
+            android:label="Programs"
+            android:noHistory="false"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.jeevani.tutorialspoint.Programs" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SplashScreenActivity" />
+        </activity>
+
+        <activity
+            android:name=".ConceptTopicLists"
+            android:label="Concept Topics"
+            android:noHistory="false"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".Concepts"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.jeevani.tutorialspoint.ConceptTopicLists" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Concepts" />
+        </activity>
+
+        <activity
+            android:name=".Introduction"
+            android:label="Introduction"
+            android:noHistory="false"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".ConceptTopicLists"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.jeevani.tutorialspoint.Introduction" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConceptTopicLists" />
+        </activity>
+
+        <activity
+            android:name=".ProgramTopicLists"
+            android:label="Program Topics"
+            android:noHistory="false"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".Programs"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.jeevani.tutorialspoint.ProgramTopicLists" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Programs" />
+        </activity>
+
+    </application>
+
+</manifest>
